@@ -7,7 +7,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace WPF
 {
-    class WorkExcel
+    public class WorkExcel
     {
         private Excel.Application _application = null;
         private Excel.Workbook _workBook = null;
@@ -27,6 +27,32 @@ namespace WPF
             _workBook = _application.Workbooks.Add(pathToTemplateObj);
             _workSheet = (Excel.Worksheet)_workBook.Worksheets.get_Item(1);
         }
+
+        /// <summary>
+        /// Заполняет текущий лист данными из источника
+        /// </summary>
+        /// <param name="source">Матрица строк</param>
+        /// <param name="startColumn">Начальная позиция вставки - столбец</param>
+        /// <param name="startRow">Начальная позиция вставки - строка</param>
+        public void FillTable(string[,] source, int startRow, int startColumn)
+        {
+         //TODO   
+        }
+
+        /// <summary>
+        /// ПОлучает матрицу значений из диапазона
+        /// </summary>
+        /// <param name="rFrom">НАчало диапазона - строка</param>
+        /// <param name="cFrom">НАчало диапазона - столбец</param>
+        /// <param name="rTo">Конец диапазона - строка</param>
+        /// <param name="cTo">Конец диапазона - столбец</param>
+        /// <returns></returns>
+        public string[,] GetRange(int rFrom, int cFrom, int rTo, int cTo)
+        {
+            //TODO
+            return null;
+        }
+
         public bool Visible // ВИДИМОСТЬ ДОКУМЕНТА
         {
             get
