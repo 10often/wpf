@@ -5,10 +5,39 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPF.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="700" Background="AliceBlue"
+      d:DesignHeight="500" d:DesignWidth="570" Background="White"
       Title="Home">
 
     <Grid>
-        
+
+        <!-- Header -->
+        <StackPanel Height="90" VerticalAlignment="Top">
+            <Grid>
+            <DockPanel Width="270" Height="90" HorizontalAlignment="Left" >
+                    <TextBlock Text="Quotes" FontSize="22" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"
+                           Margin="25,0,0,0"></TextBlock>
+            </DockPanel>
+            <DockPanel Width="270" Height="90" HorizontalAlignment="Right" >
+
+            </DockPanel>
+            </Grid>
+        </StackPanel>
+
+        <Grid ShowGridLines="True" Height="385" VerticalAlignment="Top" Margin="0,90,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!-- First Table: Purchases -->
+
+            <!-- Second Table: Sales -->
+
+            <!-- Third Table: History -->
+            
+        </Grid>
+
     </Grid>
 </Page>

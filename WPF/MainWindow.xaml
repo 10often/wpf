@@ -17,7 +17,7 @@
 
             <!-- Main Page Frame -->
             <Grid HorizontalAlignment="Right" Width="570">
-                <Frame Width="570" NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
+                <Frame Width="570" Height="500" NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
             </Grid>
 
             <!-- Navigation -->
