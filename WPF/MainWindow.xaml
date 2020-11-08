@@ -15,6 +15,11 @@
         <!-- Background color -->
         <Grid Background="White">
 
+            <!-- Main Page Frame -->
+            <Grid HorizontalAlignment="Right" Width="570">
+                <Frame Width="570" NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
+            </Grid>
+
             <!-- Navigation -->
             <Grid x:Name="nav_pnl" HorizontalAlignment="Left" Width="130" Background="#2e3864">
 
@@ -24,6 +29,18 @@
                     <Grid Height="65">
                         
                     </Grid>
+
+                    <!-- Grid for menu -->
+                    <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Height="435" Width="130">
+                        
+                        <Button x:Name="btn_home_page" Click="page_home_btn_Click" Width="130" Margin="0,5,0,5" Padding="10" Background="Transparent">
+                            <TextBlock Text="Home"></TextBlock>
+                        </Button>
+                        <Button x:Name="btn_qu_1_page" Click="page_qu_1_btn_Click" Width="130" Margin="0,5,0,5" Padding="10" Background="Transparent">
+                            <TextBlock Text="Quotes"></TextBlock>
+                        </Button>
+                        
+                    </StackPanel>
 
                 </StackPanel>
 
