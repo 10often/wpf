@@ -4,9 +4,32 @@
              xmlns:local="clr-namespace:WPF"
              Startup="Application_Startup">
     <Application.Resources>
+        <!-- Fonts -->
         <Style x:Key="Font_ExtraBold">
             <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica ExtBd">
             </Setter>
         </Style>
+        <Style x:Key="Font_Regular">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica">
+            </Setter>
+        </Style>
+
+        <!-- Menu Style -->
+        <Style TargetType="TextBlock"
+           x:Key="Menu_Item_Textblock">
+            <Setter Property="Foreground" Value="#3d4b89"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica">
+            </Setter>
+        </Style>
+        <!-- <Style TargetType="Button"
+           x:Key="Menu_Item_Button">
+            <Setter Property="Width" Value="130"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style> -->
+        
     </Application.Resources>
 </Application>

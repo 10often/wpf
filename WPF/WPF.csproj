@@ -68,6 +68,18 @@
     <Compile Include="Pages\Quotation1.xaml.cs">
       <DependentUpon>Quotation1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Quotation2.xaml.cs">
+      <DependentUpon>Quotation2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation3.xaml.cs">
+      <DependentUpon>Quotation3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation4.xaml.cs">
+      <DependentUpon>Quotation4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation5.xaml.cs">
+      <DependentUpon>Quotation5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\WorkExcel.cs" />
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
@@ -78,6 +90,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Quotation1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,6 +147,24 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Common\Коммандная разработка.xlsx" />
+    <Resource Include="Fonts\NeueHaasUnica-Black.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Bold.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-BoldItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-BoldItalic_1.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtBlkIta.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtLtIta.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraBlack.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraBold.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraLight.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Italic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Light.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-LightItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Medium.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-MediumItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Regular.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Thin.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ThinItalic.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
