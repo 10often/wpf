@@ -27,7 +27,7 @@
 
                     <!-- Grid for logo -->
                     <Grid Height="65">
-                      <Image Source ="Resources\logo.png" Width="110"/>
+                      <Image Source="Resources\logo.png" Width="110"/>
                     </Grid>
 
                     <!-- Grid for menu -->
@@ -35,8 +35,8 @@
                       <Separator Width="80" BorderBrush="#3d4b89"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Margin="20,25,0,0"/>
                       <Button x:Name="btn_home_page" Click="page_home_btn_Click" Width="130" Margin="0,5,0,5" Padding="10" 
                               Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
-                          <TextBlock x:Name="home_text" Text="My space" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
-                      </Button>
+                            <TextBlock x:Name="home_text" Text="My space" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                        </Button>
                       <Separator Width="80" BorderBrush="#3d4b89"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Margin="20,0,0,25"/>
                       
                       <Button x:Name="btn_qu_1_page" Click="page_qu_1_btn_Click" Width="130" Padding="5" 

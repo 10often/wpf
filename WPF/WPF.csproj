@@ -193,5 +193,10 @@
       <Name>LibDefinitions</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\av.png" />
+    <Resource Include="Resources\logo.png" />
+    <Content Include="Resources\logo.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
