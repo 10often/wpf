@@ -26,6 +26,11 @@ namespace WPF.Views
             InitializeComponent();
 
             DataContext = new VM_MainWindow();
+            
+            // params int[]
+           // __arglist
+            //throw new NullReferenceException();
+            //throw null;
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF.Core
 {
+    [Serializable]
     public class ModelControl
     {
         private ModelControl() { }
