@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Traders.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="Quotation.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="Trader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
