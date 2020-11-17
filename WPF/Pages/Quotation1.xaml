@@ -51,8 +51,7 @@
             </Grid.RowDefinitions>
 
             <!-- First Segment: Chart -->
-
-
+            
             <!-- Second Segment: Table -->
             
         </Grid>
