@@ -14,6 +14,11 @@
             </Setter>
         </Style>
 
+        <Style x:Key="Font_ExtraLight">
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica Light">
+            </Setter>
+        </Style>
+
         <!-- Menu Style -->
         <Style TargetType="TextBlock"
            x:Key="Menu_Item_Textblock">
@@ -30,6 +35,33 @@
             <Setter Property="Padding" Value="10"/>
             <Setter Property="Background" Value="Transparent"/>
         </Style> -->
-        
+
+        <!-- Column header -->
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0,0,0,0"/>
+            <Setter Property="AlternatingRowBackground" Value="#f1f2f8"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+        </Style>
+        <Style TargetType="DataGridCell">
+            <Setter Property="Margin" Value="15,0,0,0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderBrush" Value="#dfe2ee"/>
+            <Setter Property="Foreground" Value="#3d4b89"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica Light"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridColumnHeader}"
+           >
+            <Setter Property="Foreground" Value="#3d4b89"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0,0,2,2"/>
+            <Setter Property="BorderBrush" Value="#dfe2ee"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
     </Application.Resources>
 </Application>

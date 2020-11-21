@@ -52,6 +52,15 @@
             </Grid.RowDefinitions>
             
             <!-- First Table: Purchases -->
+            
+            <DataGrid x:Name="Purchases_table" Width="550" Grid.Row="0" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="130"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Deal" Binding="{Binding Deal}" Width="130"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="130"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Market entry" Binding="{Binding Market_entry}" Width="130"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
 
             <!-- Second Table: Sales -->
 
