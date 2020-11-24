@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WPF.Core;
 using WPF.Utils;
+using WPF.Views;
 
 namespace WPF.ViewModels
 {
@@ -14,17 +15,20 @@ namespace WPF.ViewModels
 
         private void _DoExcel()
         {//Test
-            WorkExcel workExcel = new WorkExcel();
-            workExcel.CreateExcel();
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    workExcel.InsertValue((i + 2 * j).ToString(), i + 1, j + 1);
-                }             
-            }
-       
-            workExcel.Visible = true;
+         //WorkExcel workExcel = new WorkExcel();
+         //workExcel.CreateExcel();
+         //for (int i = 0; i < 10; i++)
+         //{
+         //    for (int j = 0; j < 10; j++)
+         //    {
+         //        workExcel.InsertValue((i + 2 * j).ToString(), i + 1, j + 1);
+         //    }             
+         //}
+
+            //workExcel.Visible = true;
+
+            ExportExcelWindow w = new ExportExcelWindow();
+            w.Show();
         }
 
         public string Title

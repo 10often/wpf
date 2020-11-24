@@ -23,7 +23,7 @@ namespace WPF.Views
         public ExportExcelWindow() {
             InitializeComponent();
 
-            DataContext = new ExportExcelWindow();
+            //DataContext = new ExportExcelWindow();
 
             // params int[]
             // __arglist
