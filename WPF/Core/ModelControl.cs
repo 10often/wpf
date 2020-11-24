@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibDefinitions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,10 @@ namespace WPF.Core
         {
             return s_inst;
         }
+
+        /// <summary>
+        /// Трейдеры
+        /// </summary>
+        public List<Trader> Traders = new List<Trader>();
     }
 }

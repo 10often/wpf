@@ -12,5 +12,9 @@
                 Command="{Binding CmdExcel}"
                 Content="To Excel" 
                 HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding CmdSave}"
+                Content="Save"
+                HorizontalAlignment="Left"
+                Margin="5"/>
     </StackPanel>
 </Window>

@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LibDefinitions
 {
+    [Serializable]
     public class Trader
     {
         public int Id { get; set; }

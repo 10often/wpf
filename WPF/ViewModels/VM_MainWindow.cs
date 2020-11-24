@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,18 @@ namespace WPF.ViewModels
     public class VM_MainWindow : VM_Basic
     {
         public RelayCommand CmdExcel { get { return new RelayCommand(_DoExcel, _AlwaysTrue); } }
+        public RelayCommand CmdSave { get { return new RelayCommand(_DoSave, _AlwaysTrue); } }
+
+        private void _DoSave()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() != true)
+                return;
+
+            Ap.MC.Traders.Add(new LibDefinitions.Trader() { Account = 200, Id = 1, Name = "Alex" });
+
+            Ap.DS.SaveToJSON(saveFileDialog.FileName, Ap.MC);
+        }
 
         private void _DoExcel()
         {//Test
