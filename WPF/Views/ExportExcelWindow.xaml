@@ -1,0 +1,73 @@
+﻿<Window x:Class="WPF.Views.ExportExcelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF.Views"
+        mc:Ignorable="d"
+        Title="Экспорт в Excel" Height="200" Width="400"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen">
+
+    <!-- Styles -->
+    <Window.Resources>
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="Control.FontFamily" Value="Verdana" />
+            <Setter Property="Control.Background" Value="Gray" />
+            <Setter Property="Control.Foreground" Value="White" />
+            <Setter Property="Control.Margin" Value="10" />
+            <Setter Property="Control.Padding" Value="7" />
+        </Style>
+        <Style x:Key="GridCell">
+            <Setter Property="Control.HorizontalAlignment" Value="Center" />
+            <Setter Property="Control.Margin" Value="3" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <Border BorderBrush="Gray" BorderThickness="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource GridCell}"><Bold>Выбран</Bold></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource GridCell}"><Bold>Таблица</Bold></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource GridCell}"><Bold>Описание</Bold></TextBlock>
+
+                <CheckBox x:Name="tradersCheckBox" Grid.Column="0" Grid.Row="1" Style="{StaticResource GridCell}" Margin="20,0,21.4,3.2" Height="15" VerticalAlignment="Bottom"/>
+                <CheckBox x:Name="quotationsCheckBox" Grid.Column="0" Grid.Row="2" Style="{StaticResource GridCell}"/>
+                <CheckBox x:Name="requestsCheckBox" Grid.Column="0" Grid.Row="3" Style="{StaticResource GridCell}"/>
+                <CheckBox x:Name="InstrumentsCheckBox" Grid.Column="0" Grid.Row="4" Style="{StaticResource GridCell}"/>
+
+                <TextBlock Text="Трейдеры" Grid.Column="1" Grid.Row="1" Style="{StaticResource GridCell}"/>
+                <TextBlock Text="Котировки" Grid.Column="1" Grid.Row="2" Style="{StaticResource GridCell}"/>
+                <TextBlock Text="Запросы" Grid.Column="1" Grid.Row="3" Style="{StaticResource GridCell}"/>
+                <TextBlock Text="Инструменты" Grid.Column="1" Grid.Row="4" Style="{StaticResource GridCell}"/>
+
+                <TextBlock Text="Таблица с инструментами" Grid.Column="2" Grid.Row="1" Style="{StaticResource GridCell}"/>
+                <TextBlock Text="Таблица с котировками" Grid.Column="2" Grid.Row="2" Style="{StaticResource GridCell}"/>
+                <TextBlock Text="Таблица с запросами" Grid.Column="2" Grid.Row="3" Style="{StaticResource GridCell}"/>
+                <TextBlock Text="Таблица с инструментами" Grid.Column="2" Grid.Row="4" Style="{StaticResource GridCell}"/>
+            </Grid>
+        </Border>
+        <CheckBox HorizontalAlignment="Center" x:Name="tablesOnDifferentListsCheckBox" Content="Все таблицы на разных листах"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="exportBtton" Content="экспорт" Style="{StaticResource Button}"/>
+            <Button x:Name="cancelButton" Content="отмена" Style="{StaticResource Button}"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
