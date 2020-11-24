@@ -11,6 +11,14 @@
         WindowStartupLocation="CenterScreen">
     <StackPanel>
         <TabControl>
+            <TabControl.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="2"/>
+                    <Setter Property="Padding" Value="1 0"/>
+                    <Setter Property="Width" Value="60"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </TabControl.Resources>
             <TabItem x:Name="QuotationsTab">
                 <TabItem.Header>
                     <StackPanel>
@@ -20,14 +28,14 @@
                 <TabItem.Content>
                     <Grid>
                         <Grid Background="White">
-                            <Grid.RowDefinitions>
+                            <!--<Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="40"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="40"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+                            </Grid.RowDefinitions>-->
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -41,38 +49,40 @@
                             </Grid.ColumnDefinitions>
 
                             <!--Column postions -->
-                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
-                                <TextBlock Text="Name" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
-                                <TextBox Text="1" Width="50" BorderThickness="2"/>
+                            <StackPanel Orientation="Vertical" 
+                                        Grid.Row="2" 
+                                        Grid.Column="1">
+                                <TextBlock Text="Name" Background="LightGray"/>
+                                <TextBox Text="1" Width="50" BorderThickness="2" />
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
-                                <TextBlock Text="Open" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Open" Background="LightGray"/>
                                 <TextBox Text="2" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
-                                <TextBlock Text="Low" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Low" Background="LightGray"/>
                                 <TextBox Text="3" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="4">
-                                <TextBlock Text="High" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="High" Background="LightGray"/>
                                 <TextBox Text="4" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="5">
-                                <TextBlock Text="Difference" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Difference" Background="LightGray" />
                                 <TextBox Text="5" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="6">
-                                <TextBlock Text="Volume" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Volume" Background="LightGray" />
                                 <TextBox Text="6" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="7">
-                                <TextBlock Text="Date" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Date" Background="LightGray" />
                                 <TextBox Text="7" Width="50" BorderThickness="2"/>
                             </StackPanel>
                         </Grid>
@@ -88,14 +98,14 @@
                 <TabItem.Content>
                     <Grid>
                         <Grid Background="White">
-                            <Grid.RowDefinitions>
+                            <!--<Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+                            </Grid.RowDefinitions>-->
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -110,37 +120,37 @@
 
                             <!--Column postions -->
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
-                                <TextBlock Text="Номер заявки" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Номер заявки" Background="LightGray" />
                                 <TextBox Text="1" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
-                                <TextBlock Text="Номер трейдера" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Номер трейдера" Background="LightGray" />
                                 <TextBox Text="2" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
-                                <TextBlock Text="Дата" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Дата" Background="LightGray" />
                                 <TextBox Text="3" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="4">
-                                <TextBlock Text="Стоимость" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Стоимость" Background="LightGray" />
                                 <TextBox Text="4" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="5">
-                                <TextBlock Text="Размер" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Размер" Background="LightGray" />
                                 <TextBox Text="5" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="6">
-                                <TextBlock Text="Тип заявки" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Тип заявки" Background="LightGray" />
                                 <TextBox Text="6" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="7">
-                                <TextBlock Text="Название" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Название" Background="LightGray" />
                                 <TextBox Text="7" Width="50" BorderThickness="2"/>
                             </StackPanel>
                         </Grid>
@@ -158,14 +168,14 @@
                 <TabItem.Content>
                     <Grid>
                         <Grid Background="White">
-                            <Grid.RowDefinitions>
+                            <!--<Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="50"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+                            </Grid.RowDefinitions>-->
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -176,17 +186,17 @@
 
                             <!--Column postions -->
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
-                                <TextBlock Text="Номер" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Номер" Background="LightGray" />
                                 <TextBox Text="1" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
-                                <TextBlock Text="Имя" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Имя" Background="LightGray" />
                                 <TextBox Text="2" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
-                                <TextBlock Text="Баланс?" Background="LightGray" Padding="5" Margin="0 0 5 0"/>
+                                <TextBlock Text="Баланс?" Background="LightGray" />
                                 <TextBox Text="3" Width="50" BorderThickness="2"/>
                             </StackPanel>
 
