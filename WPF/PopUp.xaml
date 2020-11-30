@@ -1,0 +1,165 @@
+﻿<Window x:Class="WPF.PopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="PopUp" Height="250" Width="370">
+    <Grid Margin="25,25,25,30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--Header-->
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="10"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Separator Width="160" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0"  HorizontalAlignment="Left" Grid.Row="0"/>
+                <TextBlock Text="Name of Quote" FontSize="20" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}"
+                               VerticalAlignment="Center"  Grid.Row="1"></TextBlock>
+                <Separator Width="100" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Grid.Row="2"/>
+            </Grid>
+            <Grid Grid.Column="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"></RowDefinition>
+                    <RowDefinition Height=".6*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="10"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Separator Width="90" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0"  HorizontalAlignment="Right" Grid.Row="0"/>
+                <TextBlock Text="22.10.20 13:30" FontSize="8" Foreground="#dfe2ee" Style="{StaticResource Font_Regular}"
+                               HorizontalAlignment="Right" VerticalAlignment="Top"  Grid.Row="1"></TextBlock>
+                <TextBlock Text="0.29%" FontSize="17" Foreground="#69b376" Style="{StaticResource Font_ExtraLight}"
+                               HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Row="2"></TextBlock>
+                <Separator Width="60" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0" HorizontalAlignment="Right" Grid.Row="3"/>
+            </Grid>
+        </Grid>
+
+        <!--Main body-->
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Opening" FontSize="8" Foreground="#2e3864" Style="{StaticResource Font_Regular}"
+                               HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Row="1"></TextBlock>
+                <TextBlock Text="12805.05" FontSize="7" Foreground="#2e3864" Style="{StaticResource Font_ExtraLight}"
+                               HorizontalAlignment="Center" VerticalAlignment="Top"  Grid.Row="2"></TextBlock>
+
+            </Grid>
+
+            <Border BorderBrush="#dfe2ee" BorderThickness="1,0,1,0" Grid.Column="1" Margin="0,10,0,10"/>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Maximum" FontSize="8" Foreground="#5a6baf" Style="{StaticResource Font_Regular}"
+                               HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Row="1"></TextBlock>
+                <TextBlock Text="12838.22" FontSize="7" Foreground="#5a6baf" Style="{StaticResource Font_ExtraLight}"
+                               HorizontalAlignment="Center" VerticalAlignment="Top"  Grid.Row="2"></TextBlock>
+                
+                <!---->
+
+                <TextBlock Text="Minimum" FontSize="8" Foreground="#5a6baf" Style="{StaticResource Font_Regular}"
+                               HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Row="4"></TextBlock>
+                <TextBlock Text="12775.28" FontSize="7" Foreground="#5a6baf" Style="{StaticResource Font_ExtraLight}"
+                               HorizontalAlignment="Center" VerticalAlignment="Top"  Grid.Row="5"></TextBlock>
+
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Closing" FontSize="8" Foreground="#2e3864" Style="{StaticResource Font_Regular}"
+                               HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Row="1"></TextBlock>
+                <TextBlock Text="12808" FontSize="7" Foreground="#2e3864" Style="{StaticResource Font_ExtraLight}"
+                               HorizontalAlignment="Center" VerticalAlignment="Top"  Grid.Row="2"></TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBox Height="25" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,5" Padding="5"
+                         BorderThickness="0" Background="#f1f2f8" VerticalContentAlignment="Center"
+                         FontSize="10" Foreground="#dfe2ee" Style="{StaticResource Font_Regular}" Grid.Row="0">
+                    <TextBox.Text>Deal</TextBox.Text>
+                </TextBox>
+
+                <TextBox Height="25" Width="150" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,0,0" Padding="5"
+                         BorderThickness="0" Background="#f1f2f8" VerticalContentAlignment="Center"
+                         FontSize="10" Foreground="#dfe2ee" Style="{StaticResource Font_Regular}" Grid.Row="1">
+                    <TextBox.Text>Volume</TextBox.Text>
+                </TextBox>
+
+            </Grid>
+
+        </Grid>
+        <!--Buttons-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="8*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Button x:Name="delete_quotes" Click="delete_quotes_btn_Click"  Padding="5" Background="#dfe2ee" BorderThickness="0" 
+                                HorizontalContentAlignment="Center" Grid.Column="0">
+            </Button>
+
+
+            <Button x:Name="exit" Click="exit_btn_Click" Width="110" Background="Transparent" BorderBrush="#cd335a" BorderThickness="0,0,0,2" 
+                                HorizontalContentAlignment="Center" Grid.Column="1">
+                <TextBlock Text="Confirm" FontSize="13" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}"></TextBlock>
+            </Button>
+
+        </Grid>
+
+    </Grid>
+</Window>
