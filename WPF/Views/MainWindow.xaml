@@ -16,5 +16,9 @@
                 Content="Save"
                 HorizontalAlignment="Left"
                 Margin="5"/>
+        <Button Command="{Binding CmdWord}"
+                Content="To Word"
+                HorizontalAlignment="Left"
+                Margin="5,30,0,0" VerticalAlignment="Top" Width="75"/>
     </StackPanel>
 </Window>

@@ -14,6 +14,8 @@ namespace WPF.ViewModels
     {
         public RelayCommand CmdExcel { get { return new RelayCommand(_DoExcel, _AlwaysTrue); } }
         public RelayCommand CmdSave { get { return new RelayCommand(_DoSave, _AlwaysTrue); } }
+        public RelayCommand CmdWord { get { return new RelayCommand(_DoWord, _AlwaysTrue); } }
+
 
         private void _DoSave()
         {
@@ -42,6 +44,25 @@ namespace WPF.ViewModels
 
             ExportExcelWindow w = new ExportExcelWindow();
             w.Show();
+        }
+
+        private void _DoWord()
+        {//Test
+            WorkWord workWord = new WorkWord();
+            workWord.CreateWord();
+            string[] words = new string[] { "Harder", "Better", "Faster", "Stronger" };
+            workWord.InputText(words);
+            //string imagePath = @"D:\wpf\WPF\bin\Debug\test.jpg";
+            string newPath = System.IO.Path.Combine(Environment.CurrentDirectory, @"..\..\");
+            //newPath = System.IO.Path.Combine(newPath, @"Common\UML_Diagram.PNG");
+            //workWord.InputImage(newPath);
+            newPath = System.IO.Path.Combine(newPath, @"Common\test.jpg");
+            workWord.InputImage(newPath);
+            //workWord.InputImage(imagePath);
+            workWord.InputText(words);
+            string[,] words_m = new string[,] { { "Harder", "Better", "Faster", "Stronger" }, { "hi", "my", "by", "fy" }, { "Harder", "Better", "Faster", "Stronger" } };
+            workWord.InputTable(words_m);
+            workWord.Visible = true;
         }
 
         public string Title
