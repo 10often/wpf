@@ -20,6 +20,7 @@ namespace WPF.Pages
     /// </summary>
     public partial class Quotation1 : Page
     {
+
         public Quotation1()
         {
             InitializeComponent();

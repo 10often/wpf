@@ -11,7 +11,7 @@
     <Grid>
 
         <!-- Header -->
-        <StackPanel Height="90" VerticalAlignment="Top">
+        <StackPanel Height="80" VerticalAlignment="Top">
             <Grid>
             <DockPanel Width="270" Height="90" HorizontalAlignment="Left" >
                 <StackPanel VerticalAlignment="Center">
@@ -43,7 +43,7 @@
             </Grid>
         </StackPanel>
 
-        <Grid ShowGridLines="True" Height="385" VerticalAlignment="Top" Margin="0,90,0,0">
+        <Grid ShowGridLines="True" Height="395" VerticalAlignment="Top" Margin="0,90,0,0">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -52,20 +52,114 @@
             </Grid.RowDefinitions>
             
             <!-- First Table: Purchases -->
-            
-            <DataGrid x:Name="Purchases_table" Width="550" Grid.Row="0" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="130"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Deal" Binding="{Binding Deal}" Width="130"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="130"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Market entry" Binding="{Binding Market_entry}" Width="130"></DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+
+            <Grid Grid.Row="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <DockPanel HorizontalAlignment="Left" Margin="0,10,0,0">
+
+                    <TextBlock Text="Purchases" FontSize="17" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"
+                    Margin="25,0,0,0" Grid.Row="0"></TextBlock>
+
+                </DockPanel>
+
+                <DockPanel HorizontalAlignment="Right" Margin="0,10,0,0">
+
+                    <Button x:Name="export" Width="25" Margin="0,0,11,0"
+                                Background="#f1f2f8" BorderThickness="0" HorizontalContentAlignment="Center">
+                        <TextBlock FontSize="15" Text=">>" Foreground="#dfe2ee" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"></TextBlock>
+                    </Button>
+
+                </DockPanel>
+
+                <DataGrid x:Name="Purchases_table" Width="550" Grid.Row="1" Margin="0,0,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Deal" Binding="{Binding Deal}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Market entry" Binding="{Binding Market_entry}" Width="*"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
 
             <!-- Second Table: Sales -->
 
+            <Grid Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <DockPanel HorizontalAlignment="Left" Margin="0,10,0,0">
+
+                    <TextBlock Text="Sales" FontSize="17" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"
+                    Margin="25,0,0,0" Grid.Row="0"></TextBlock>
+
+                </DockPanel>
+
+                <DockPanel HorizontalAlignment="Right" Margin="0,10,0,0">
+
+                    <Button x:Name="export_2" Width="25" Margin="0,0,11,0"
+                                Background="#f1f2f8" BorderThickness="0" HorizontalContentAlignment="Center">
+                        <TextBlock FontSize="15" Text=">>" Foreground="#dfe2ee" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"></TextBlock>
+                    </Button>
+
+                </DockPanel>
+
+                <DataGrid x:Name="_table" Width="550" Grid.Row="1" Margin="0,0,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Deal" Binding="{Binding Deal}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Market entry" Binding="{Binding Market_entry}" Width="*"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+
             <!-- Third Table: History -->
+
+            <Grid Grid.Row="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <DockPanel HorizontalAlignment="Left" Margin="0,10,0,0">
+
+                    <TextBlock Text="History" FontSize="17" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"
+                    Margin="25,0,0,0" Grid.Row="0"></TextBlock>
+
+                </DockPanel>
+
+                <DockPanel HorizontalAlignment="Right" Margin="0,10,0,0">
+
+                    <Button Width="25" Margin="0,0,11,0"
+                                Background="#f1f2f8" BorderThickness="0" HorizontalContentAlignment="Center">
+                        <TextBlock FontSize="15" Text=">>" Foreground="#dfe2ee" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"></TextBlock>
+                    </Button>
+
+                </DockPanel>
+
+                <DataGrid Width="550" Grid.Row="1" Margin="0,0,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Deal" Binding="{Binding Deal}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Market entry" Binding="{Binding Market_entry}" Width="*"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
             
+
         </Grid>
 
     </Grid>

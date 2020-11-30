@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPF.Pages"
+      xmlns:chart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="570" Background="White"
       Title="Quotation1">
@@ -51,9 +52,25 @@
             </Grid.RowDefinitions>
 
             <!-- First Segment: Chart -->
-            
+
+            <chart:CartesianChart Series="{Binding Items}" Grid.Row="0"></chart:CartesianChart>
+
             <!-- Second Segment: Table -->
-            
+
+            <DataGrid Width="550" Grid.Row="1" Margin="0,0,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="80"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Deal" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Price ch." Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Opening" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Max" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Min" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Closing" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Update" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
         </Grid>
 
     </Grid>

@@ -55,7 +55,7 @@
         <Style TargetType="{x:Type DataGridColumnHeader}"
            >
             <Setter Property="Foreground" Value="#3d4b89"/>
-            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontSize" Value="10"/>
             <Setter Property="TextElement.FontFamily" Value="/Fonts/#Neue Haas Unica"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0,0,2,2"/>
