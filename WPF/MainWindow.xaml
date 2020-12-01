@@ -1,0 +1,76 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+        <!-- Background color -->
+        <Grid Background="White">
+
+            <!-- Main Page Frame -->
+            <Grid HorizontalAlignment="Right" Width="570">
+                <Frame Width="570" Height="500" NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
+            </Grid>
+
+            <!-- Navigation -->
+            <Grid x:Name="nav_pnl" HorizontalAlignment="Left" Width="130" Background="#2e3864">
+
+                <StackPanel x:Name="st_pnl">
+
+                    <!-- Grid for logo -->
+                    <Grid Height="65">
+                      <Image Source="Resources\logo.png" Width="110"/>
+                    </Grid>
+
+                    <!-- Grid for menu -->
+                    <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Height="435" Width="130">
+                      <Separator Width="80" BorderBrush="#3d4b89"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Margin="20,25,0,0"/>
+                      <Button x:Name="btn_home_page" Click="page_home_btn_Click" Width="130" Margin="0,5,0,5" Padding="10" 
+                              Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                            <TextBlock x:Name="home_text" Text="My space" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                        </Button>
+                      <Separator Width="80" BorderBrush="#3d4b89"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Margin="20,0,0,25"/>
+                      
+                      <Button x:Name="btn_qu_1_page" Click="page_qu_1_btn_Click" Width="130" Padding="5" 
+                              Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                          <TextBlock x:Name="page_1_text" Text="Quotes" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                      </Button>
+                      <Button x:Name="btn_qu_2_page" Click="page_qu_2_btn_Click" Width="130" Padding="5"
+                                Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                        <TextBlock x:Name="page_2_text" Text="World Indices" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                      </Button>
+                      <Button x:Name="btn_qu_3_page" Click="page_qu_3_btn_Click" Width="130" Padding="5"
+                                Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                        <TextBlock x:Name="page_3_text" Text="RF shares" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                      </Button>
+                      <Button x:Name="btn_qu_4_page" Click="page_qu_4_btn_Click" Width="130" Padding="5"
+                                Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                        <TextBlock x:Name="page_4_text" Text="Bond Market" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                      </Button>
+                      <Button x:Name="btn_qu_5_page" Click="page_qu_5_btn_Click" Width="130" Padding="5"
+                                Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                        <TextBlock x:Name="page_5_text" Text="Cryptocur" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                      </Button>
+                      <Button x:Name="exit" Click="exit_btn_Click" Width="130" Padding="5" Margin="0,100,0,0"
+                                Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left">
+                        <TextBlock Text="Exit" Style="{StaticResource Menu_Item_Textblock}"></TextBlock>
+                      </Button>
+                        
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>

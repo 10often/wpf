@@ -42,6 +42,12 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -66,7 +72,60 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Core\DataStore.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation1.xaml.cs">
+      <DependentUpon>Quotation1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation2.xaml.cs">
+      <DependentUpon>Quotation2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation3.xaml.cs">
+      <DependentUpon>Quotation3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotation4.xaml.cs">
+      <DependentUpon>Quotation4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp.xaml.cs">
+      <DependentUpon>PopUp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\WorkExcel.cs" />
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quotation5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\ExportExcelWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,6 +179,25 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Common\Коммандная разработка.xlsx" />
+    <Resource Include="Fonts\NeueHaasUnica-Black.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Bold.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-BoldItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-BoldItalic_1.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtBlkIta.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtLtIta.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraBlack.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraBold.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ExtraLight.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Italic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Light.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-LightItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Medium.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-MediumItalic.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Regular.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-Thin.ttf" />
+    <Resource Include="Fonts\NeueHaasUnica-ThinItalic.ttf" />
+    <None Include="packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,6 +253,11 @@
       <Project>{f97c3c01-926f-49ba-8b10-f40b8e28cb02}</Project>
       <Name>LibDefinitions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\av.png" />
+    <Resource Include="Resources\logo.png" />
+    <Content Include="Resources\logo.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

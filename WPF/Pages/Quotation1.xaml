@@ -1,0 +1,77 @@
+﻿<Page x:Class="WPF.Pages.Quotation1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF.Pages"
+      xmlns:chart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="570" Background="White"
+      Title="Quotation1">
+
+    <Grid>
+
+        <!-- Header -->
+        <StackPanel Height="90" VerticalAlignment="Top">
+            <Grid>
+                <DockPanel Width="270" Height="90" HorizontalAlignment="Left" >
+                    <StackPanel VerticalAlignment="Center">
+                        <Separator Width="230" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Margin="25,0,0,0"/>
+                        <TextBlock Text="Quotes" FontSize="22" Foreground="#cd335a" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center"
+                    Margin="25,0,0,0"></TextBlock>
+                        <Separator Width="170" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0" HorizontalAlignment="Left" Margin="25,5,0,0"/>
+                    </StackPanel>
+                </DockPanel>
+                <DockPanel Width="270" Height="90" HorizontalAlignment="Right" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="pack://application:,,,/Resources/av.png" Width="80" HorizontalAlignment="Right" Margin="0,0,15,0" Grid.Column="1"/>
+
+                        <StackPanel VerticalAlignment="Center" Grid.Column="0">
+
+                            <Separator Width="150" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0" HorizontalAlignment="Right" Margin="25,0,0,0"/>
+                            <TextBlock Text="Alice Pleasance Liddell" FontSize="12" Foreground="#5a6baf" Style="{StaticResource Font_ExtraBold}" VerticalAlignment="Center" 
+                                       Margin="0,9,0,9" HorizontalAlignment="Right"></TextBlock>
+                            <Separator Width="110" BorderBrush="#dfe2ee"  BorderThickness="0 5 0 0" HorizontalAlignment="Right" Margin="25,5,0,0"/>
+
+                        </StackPanel>
+                        
+                    </Grid>
+                </DockPanel>
+            </Grid>
+        </StackPanel>
+
+        <Grid ShowGridLines="True" Height="385" VerticalAlignment="Top" Margin="0,90,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- First Segment: Chart -->
+
+            <chart:CartesianChart Series="{Binding Items}" Grid.Row="0"></chart:CartesianChart>
+
+            <!-- Second Segment: Table -->
+
+            <DataGrid Width="550" Grid.Row="1" Margin="0,0,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="80"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Deal" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Price ch." Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Opening" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Max" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Min" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Closing" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Update" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+
+    </Grid>
+</Page>
