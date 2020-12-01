@@ -18,5 +18,10 @@ namespace WPF.Core
         public static ModelControl MC = ModelControl.GetInstance();
 
         public static Constants Const = new Constants();
+
+        /// <summary>
+        /// Управление данными текущего проекта
+        /// </summary>
+        public static DataStore DS = new DataStore();
     }
 }

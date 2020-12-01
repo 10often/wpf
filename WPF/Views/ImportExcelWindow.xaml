@@ -1,0 +1,228 @@
+﻿<Window x:Class="WPF.Views.ImportExcelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="Импорт из Excel" Height="300" Width="500"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <TabControl>
+            <TabControl.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="2"/>
+                    <Setter Property="Padding" Value="1 0"/>
+                    <Setter Property="Width" Value="60"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </TabControl.Resources>
+            <TabItem x:Name="QuotationsTab">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock Margin="3">Котировки</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid Background="White">
+                            <!--<Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>-->
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Column postions -->
+                            <StackPanel Orientation="Vertical" 
+                                        Grid.Row="2" 
+                                        Grid.Column="1">
+                                <TextBlock Text="Name" Background="LightGray"/>
+                                <TextBox Text="1" Width="50" BorderThickness="2" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
+                                <TextBlock Text="Open" Background="LightGray"/>
+                                <TextBox Text="2" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
+                                <TextBlock Text="Low" Background="LightGray"/>
+                                <TextBox Text="3" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="4">
+                                <TextBlock Text="High" Background="LightGray"/>
+                                <TextBox Text="4" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="5">
+                                <TextBlock Text="Difference" Background="LightGray" />
+                                <TextBox Text="5" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="6">
+                                <TextBlock Text="Volume" Background="LightGray" />
+                                <TextBox Text="6" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="7">
+                                <TextBlock Text="Date" Background="LightGray" />
+                                <TextBox Text="7" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="RequestsTab">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock Margin="3">Запросы</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid Background="White">
+                            <!--<Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>-->
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Column postions -->
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+                                <TextBlock Text="Номер заявки" Background="LightGray" />
+                                <TextBox Text="1" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
+                                <TextBlock Text="Номер трейдера" Background="LightGray" />
+                                <TextBox Text="2" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
+                                <TextBlock Text="Дата" Background="LightGray" />
+                                <TextBox Text="3" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="4">
+                                <TextBlock Text="Стоимость" Background="LightGray" />
+                                <TextBox Text="4" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="5">
+                                <TextBlock Text="Размер" Background="LightGray" />
+                                <TextBox Text="5" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="6">
+                                <TextBlock Text="Тип заявки" Background="LightGray" />
+                                <TextBox Text="6" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="7">
+                                <TextBlock Text="Название" Background="LightGray" />
+                                <TextBox Text="7" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="TradersTab">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock Margin="3">Трейдеры</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <TabItem.Content>
+                    <Grid>
+                        <Grid Background="White">
+                            <!--<Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>-->
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Column postions -->
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+                                <TextBlock Text="Номер" Background="LightGray" />
+                                <TextBox Text="1" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
+                                <TextBlock Text="Имя" Background="LightGray" />
+                                <TextBox Text="2" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
+                                <TextBlock Text="Баланс?" Background="LightGray" />
+                                <TextBox Text="3" Width="50" BorderThickness="2"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+
+        <!-- First row / First column -->
+        <StackPanel Margin="1"  HorizontalAlignment="Left" Orientation="Horizontal">
+            <TextBlock Grid.Row="4" Grid.Column="0" Background="LightGray" Padding="5" Margin="0 0 5 0" Text="Первая строка"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Width="50" BorderThickness="2"/>
+        </StackPanel>
+        
+        <StackPanel Margin="1"  HorizontalAlignment="Left" Orientation="Horizontal">
+            <TextBlock Grid.Row="5" Grid.Column="0" Background="LightGray" Padding="5" Margin="0 0 5 0" Text="Первый столбец"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Width="50" BorderThickness="2"/>
+        </StackPanel>
+
+        <!--Controls-->
+        <StackPanel Margin="10"  HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Margin="0 0 10 0" Width="90">Открыть файл</Button>
+            <Button Margin="0 0 10 0" Width="90">Импорт</Button>
+            <Button Margin="0 0 10 0" Width="90">Отмена</Button>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

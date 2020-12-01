@@ -11,7 +11,7 @@ namespace WPF.ViewModels
     public class VM_Basic : INotifyPropertyChanged
     {
         protected bool _AlwaysTrue() { return true; }
-
+        protected bool _AlwaysFalse() { return false; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string propertyName = "")

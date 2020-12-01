@@ -10,27 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF.ViewModels;
 
-namespace WPF.Views
-{
+namespace WPF.Views {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ImportExcelWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+    public partial class ImportExcelWindow : Window {
+        public ImportExcelWindow() {
             InitializeComponent();
-
-            DataContext = new VM_MainWindow();
-            
-            // params int[]
-           // __arglist
-            //throw new NullReferenceException();
-            //throw null;
         }
     }
 }
