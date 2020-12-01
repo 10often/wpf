@@ -149,6 +149,7 @@
     <Compile Include="Utils\WorkWord.cs" />
     <Compile Include="ViewModels\VM_Basic.cs" />
     <Compile Include="ViewModels\VM_MainWindow.cs" />
+    <Compile Include="ViewModels\VM_Quotation1.cs" />
     <Compile Include="Views\ExportExcelWindow.xaml.cs">
       <DependentUpon>ExportExcelWindow.xaml</DependentUpon>
     </Compile>

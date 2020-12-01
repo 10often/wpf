@@ -57,16 +57,23 @@
 
             <!-- Second Segment: Table -->
 
-            <DataGrid Width="550" Grid.Row="1" Margin="0,0,0,0">
+            <DataGrid Width="550" Grid.Row="1" Margin="0,0,0,0"
+                      ItemsSource="{Binding ListQuotation}"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserReorderColumns="False"
+                      Language="ru-RU">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Instrument" Binding="{Binding Instrument}" Width="80"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Instrument" 
+                                        Binding="{Binding Name}" 
+                                        Width="80"/>
                     <DataGridTextColumn Header="Deal" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
                     <DataGridTextColumn Header="Price ch." Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
                     <DataGridTextColumn Header="Opening" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Max" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Min" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Closing" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Volume" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="High" Binding="{Binding High}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Low" Binding="{Binding Low}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Closing" Binding="{Binding close}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Volume" Binding="{Binding Volume}" Width="*"></DataGridTextColumn>
                     <DataGridTextColumn Header="Update" Binding="{Binding Instrument}" Width="*"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>

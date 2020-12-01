@@ -24,6 +24,8 @@ namespace WPF.Pages
         public Quotation1()
         {
             InitializeComponent();
+
+            DataContext = new ViewModels.VM_Quotation1();
         }
     }
 }

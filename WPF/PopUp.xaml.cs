@@ -23,5 +23,15 @@ namespace WPF
         {
             InitializeComponent();
         }
+
+        private void delete_quotes_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void exit_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

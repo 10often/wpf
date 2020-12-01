@@ -24,5 +24,6 @@ namespace WPF.Core
         /// Управление данными текущего проекта
         /// </summary>
         public static DataStore DS = new DataStore();
+
     }
 }
